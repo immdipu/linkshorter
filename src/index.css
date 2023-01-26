@@ -8,13 +8,19 @@
     }
 }
 
-.marginOne {
-    margin-top: 5rem;
+@media(min-width:640px) {
+    .marginOne {
+        margin-top: 5rem;
+    }
+
+
+    .marginTwo {
+        margin-top: 10rem;
+    }
+
+
 }
 
-.marginTwo {
-    margin-top: 10rem;
-}
 
 .Error {
     border: 2px solid #e52828e6;

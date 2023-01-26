@@ -6,20 +6,22 @@ const Link = ({ originalLink, shortLink, id }) => {
   const { deleteHandle } = useCommentContext();
   const [copy, setCopy] = useState(false);
   return (
-    <div className="grid grid-cols-[auto,auto,max-content] gap-3 bg-white py-3 px-4 shadow-sm rounded-md items-center">
+    <div className="grid grid-cols-[auto,auto,max-content] max-sm:grid-cols-1 gap-3 bg-white py-3 px-4 shadow-sm rounded-md items-center break-all">
       <div>
-        <h4 className="font-semibold text-slate-900 pl-4">{originalLink}</h4>
+        <h4 className="font-semibold text-slate-900 pl-4 max-sm:text-xs">
+          {originalLink}
+        </h4>
       </div>
-      <div className="flex gap-5 items-center justify-end">
+      <div className="flex gap-5 max-sm:flex-col items-center justify-end">
         <a
           href={shortLink}
           target="_blank"
-          className="text-cyan-500 font-semibold hover:text-blue-900"
+          className="text-cyan-500 font-semibold hover:text-blue-900 max-sm:text-xs"
         >
           {shortLink}
         </a>
         <CopyToClipboard text={shortLink}>
-          <button className="bg-cyan-400 w-24 h-9 relative bg-opacity-90 hover:opacity-70 tracking-wider px-6 py-1 rounded-md font-medium text-white overflow-hidden">
+          <button className="bg-cyan-400 w-24 h-9 relative bg-opacity-90 hover:opacity-70 tracking-wider px-6 py-1 rounded-md font-medium text-white overflow-hidden max-sm:text-xs max-sm:px-3 max-sm:w-16 max-sm:py-3 max-sm:h-7">
             <div
               className={
                 "bg-slate-800 absolute z-50 inset-0 flex transition-all duration-100 ease-in  items-center justify-center rounded-md font-medium " +
@@ -29,7 +31,7 @@ const Link = ({ originalLink, shortLink, id }) => {
               <p>Copied!</p>
             </div>
             <div
-              className="bg-cyan-500 absolute inset-0 flex items-center justify-center  rounded-md font-medium"
+              className="bg-cyan-500 absolute inset-0 flex items-center justify-center  rounded-md font-medium "
               onClick={() => setCopy(true)}
             >
               <p>Copy</p>
@@ -37,7 +39,7 @@ const Link = ({ originalLink, shortLink, id }) => {
           </button>
         </CopyToClipboard>
       </div>
-      <div className="ml-5 mr-2 w-fit border-2">
+      <div className="ml-5 mr-2 max-sm:w-10 max-sm:m-auto w-fit">
         <svg
           width="20px"
           height="20px"

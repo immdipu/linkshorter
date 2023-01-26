@@ -15,7 +15,7 @@ export const LinkInput = () => {
 
   return (
     <div className="bg-bg-shorten-desktop bg-[#3b3054] bg-no-repeat  px-8 py-7 bg-cover shadow-md w-full rounded-lg">
-      <form className="grid relative grid-cols-[auto,max-content] gap-4 items-center">
+      <form className="grid relative grid-cols-[auto,max-content] max-sm:grid-cols-1 gap-4 max-sm:gap-7 items-center">
         <input
           className={
             "h-10 rounded-md px-3 py-2 outline-none border-2 " +
@@ -31,7 +31,7 @@ export const LinkInput = () => {
         />
         <button
           type="submit"
-          className="bg-cyan-400 bg-opacity-90 hover:opacity-70 tracking-wider px-5 py-3 rounded-lg font-semibold text-white"
+          className="bg-cyan-400 bg-opacity-90 hover:opacity-70 tracking-wider px-5 py-3 max-sm:py-3  rounded-lg font-semibold text-white"
           onClick={submitHandle}
         >
           shorten it!

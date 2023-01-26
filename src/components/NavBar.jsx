@@ -4,7 +4,7 @@ const NavBar = () => {
   return (
     <div className="grid grid-cols-[max-content,auto] w-full items-center gap-8 mt-5">
       <img src="/images/logo.svg" alt="logo" />
-      <div className="grid grid-cols-[auto,max-content]">
+      <div className="grid grid-cols-[auto,max-content] max-sm:hidden">
         <ul className="flex gap-6 items-center">
           <li className="font-semibold text-slate-900 opacity-50 hover:opacity-100 cursor-pointer">
             Features

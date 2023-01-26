@@ -2,8 +2,8 @@ import React from "react";
 
 const FirstSection = () => {
   return (
-    <div className="grid grid-cols-2 items-center gap-10 mt-16">
-      <section className=" grid grid-cols-1 gap-4">
+    <div className="grid grid-cols-2 max-sm:grid-cols-1 max-sm: items-center gap-10 mt-16">
+      <section className=" grid grid-cols-1 gap-4 max-sm:order-last max-sm:place-items-center">
         <h5 className="font-extrabold text-5xl text-slate-700 leading-[62px]">
           More than just <br /> shorter links
         </h5>
